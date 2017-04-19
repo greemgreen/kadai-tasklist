@@ -1,0 +1,24 @@
+<% if logged_in? %>
+
+  <div class="row">
+    <aside class="col-md-4">
+      
+<%= render 'form', task: @task %>
+      
+
+    </aside>
+    <div class="col-xs-8">
+      
+<%= render 'tasks/tasks', tasks: @tasks, user: @user %>
+
+    </div>
+  </div>
+ <%= link_to 'タスク一覧へ', tasks_path, class: 'btn btn-primary' %>
+<% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Welcome to the Tasklist</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>

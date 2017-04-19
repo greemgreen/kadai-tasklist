@@ -14,8 +14,6 @@
     </div>
   </aside>
   <div class="col-xs-8">
-    <ul class="nav nav-tabs nav-justified">
-      <li><a href="#">Tasks</a></li>
-    </ul>
+    <%= render 'tasks/tasks', tasks: @tasks, user: @user %>
   </div>
 </div>
